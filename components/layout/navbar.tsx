@@ -132,7 +132,7 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
-      <div className="flex">
+      <div className="flex gap-1">
         <Link
           href={"#"}
           className="bg-gray-200 px-4 py-2 rounded-md hover:bg-opacity-70 transition-opacity"
@@ -142,7 +142,7 @@ const Navbar = () => {
         </Link>
         <Link
           href={"#"}
-          className="ml-2 bg-logo px-4 py-2 rounded-md hover:bg-opacity-70 transition-opacity"
+          className="bg-logo px-4 py-2 rounded-md hover:bg-opacity-70 transition-opacity"
         >
           Register
         </Link>

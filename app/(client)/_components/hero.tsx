@@ -11,7 +11,8 @@ const Hero = () => {
         Tired of Feeling Like a Lost Freshman?
       </h1>
       <p className="text-lg text-center my-3 text-gray-600">
-        Navigate College Like a Boss with Margdarshan <br /> We've Got the
+        Navigate College Like a Boss with{" "}
+        <b className="underline text-black">Subodhians</b> <br /> We've Got the
         Notes, the Professor Intel, and Enough Memes to Fuel All-Nighters.
       </p>
       <div className="flex gap-1 items-center">
