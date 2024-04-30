@@ -9,7 +9,21 @@ import {
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { useEffect, useState } from "react";
-import { FaCalendarMinus, FaLightbulb, FaPeopleGroup } from "react-icons/fa6";
+import {
+  FaBars,
+  FaCalendarMinus,
+  FaLightbulb,
+  FaPeopleGroup,
+} from "react-icons/fa6";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Button } from "../ui/button";
 
 const features = [
   {
@@ -47,7 +61,7 @@ const Navbar = () => {
   return (
     <header className="h-[100px] flex items-center justify-between">
       <Logo />
-      <nav className="flex gap-1">
+      <nav className="gap-1 hidden md:flex">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
@@ -118,12 +132,13 @@ const Navbar = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
-      <div>
+      <div className="flex">
         <Link
           href={"#"}
           className="bg-gray-200 px-4 py-2 rounded-md hover:bg-opacity-70 transition-opacity"
         >
-          Login as Modrator
+          <span className="lg:inline hidden">Login as Moderator</span>
+          <span className="lg:hidden inline">Login</span>
         </Link>
         <Link
           href={"#"}
@@ -131,6 +146,18 @@ const Navbar = () => {
         >
           Register
         </Link>
+        <div className="block md:hidden lg:hidden">
+          <Sheet>
+            <SheetTrigger>
+              <Button variant={"ghost"}>
+                <FaBars />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <div>Hello</div>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );

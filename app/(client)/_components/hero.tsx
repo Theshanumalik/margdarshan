@@ -16,7 +16,7 @@ const Hero = () => {
       </p>
       <div className="flex gap-1 items-center">
         <Link
-          href={"/login"}
+          href={"/notes"}
           className="bg-logo px-6 py-2 rounded-md hover:bg-opacity-80 transition-opacity flex items-center gap-1"
         >
           <FaBookBookmark />
