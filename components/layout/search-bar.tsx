@@ -9,16 +9,20 @@ const SearchBar = ({ className }: { className?: ClassValue }) => {
   return (
     <div
       className={cn(
-        "bg-white py-2 flex justify-between px-4 border-2 border-transparent focus-within:border-logo rounded-lg shadow-md",
+        "bg-white flex justify-between items-center border-2 border-transparent focus-within:border-logo rounded-full shadow-md py-1 px-2",
         className
       )}
     >
       <input
         type="text"
         placeholder="Search for notes, old papers, sayllabus etc.."
-        className="flex-1 bg-transparent outline-0 p-0 border-0"
+        className="flex-1 bg-transparent outline-0 px-3 border-0"
       />
-      <Button variant={"secondary"}>
+      <Button
+        variant={"themeBased"}
+        size={"icon"}
+        className="rounded-full grid place-items-center"
+      >
         <FaSearch />
       </Button>
     </div>
